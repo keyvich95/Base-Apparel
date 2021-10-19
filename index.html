@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>BASE APPAREL</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <img class="logo" src="images/logo.svg" alt="Base Apparel">
+  </nav>
+  <main>
+    <div class="background"></div>
+    <section>
+      <div class="contenedorDesktop">        
+        <div class="contenedor">
+          <img class="logoDesktop" src="images/logo.svg" alt="" srcset="">
+
+          <h1><span>WE'RE</span> COMING SOON</h1>
+
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <form action="" method="post">
+            <input type="email" name="email" id="email" placeholder="Email Adress">
+            <button type="submit" id="btn"><img src="images/icon-arrow.svg" alt=""></button>
+            <p></p>
+          </form>
+
+        </div>
+        <img class="heroDesktop" src="images/hero-desktop.jpg" alt="">
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+  <script>
+    function validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    function validate() {
+      const $result = $("#result");
+      const email = $("#email").val();
+      $result.text("");
+
+      if (validateEmail(email)) {
+        $result.text(email + " is valid :)");
+        $result.css("color", "green");
+      } else {
+        $result.text(email + " is not valid :(");
+        $result.css("color", "red");
+      }
+      return false;
+    }
+
+    $("#email").on("input", validate);
+  </script>
+</body>
+
+</html>
