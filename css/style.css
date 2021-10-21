@@ -2,7 +2,7 @@
     /* Primarios */
     --desaturedRed: hsl(0, 36%, 70%);
     --softRed: hsl(0, 93%, 68%);
-    /* Secundariios */
+    /* Secundarios */
     --darkGrayishRed: hsl(0, 6%, 24%);
 
     /* Fuente */
@@ -87,9 +87,18 @@ body {
         line-height: 1.6; 
         margin-bottom: 3rem;       
     }
-    form {
-        display: flex;
+    form {        
         width: 100%;
+    }
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+    .invalid {
+        border: 2px solid red !important;
+    }
+    .valid {
+        border: 2px solid green !important;
     }
     #email {
         width: 100%;
@@ -115,6 +124,13 @@ body {
     #email::placeholder {
         color: var(--desaturedRed);
         text-indent: 10rem;
+    }
+    #error {
+        margin: 0;
+        margin-left: -10rem;
+        margin-top: 1rem;
+        width: 3rem;
+        height: 3rem;        
     }
 }
 @media (min-width: 431px) {
@@ -171,11 +187,14 @@ body {
         color: var(--desaturedRed);
     }
     form {
-        width: 100%;
+        width: 100%;            
+    }
+    .flex {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;        
+    }
+    #resultado {
+        margin-top: 2rem;
     }
     #email {
         width: 100%;
@@ -203,5 +222,17 @@ body {
     }
     #btn:hover {
         background-color: var(--softRed);
+    }
+    #error {
+        margin-left: -12rem;
+        height: 3rem;
+        width: 3rem;
+        margin-top: 3rem;        
+    }
+    .invalid {
+        border: 2px solid red !important; 
+    }
+    .valid {
+        border: 2px solid green !important;
     }
 }
